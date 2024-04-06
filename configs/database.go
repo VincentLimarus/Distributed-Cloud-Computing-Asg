@@ -11,7 +11,7 @@ var DB *gorm.DB
 
 func ConnectToDB() {
 	var err error
-	dsn := "root:password@tcp(localhost:3306)/dbb?parseTime=true"
+	dsn := "root:password@tcp(database-1.cb2okamm2pjl.us-east-1.rds.amazonaws.com:3306)/dbb?parseTime=true"
 
 	// dsn := os.Getenv("DB_URL")
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
